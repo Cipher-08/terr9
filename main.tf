@@ -2,7 +2,7 @@
 variable "bucket_name" {
   description = "The name of the S3 bucket"
   type        = string
-  default = "terrateam-90"
+  default = "terrateam-900"
 }
 
 variable "region" {
