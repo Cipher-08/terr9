@@ -3,4 +3,4 @@ hooks:
     pre:
       - type: oidc
         provider: aws
-        role_arn: "arn:aws:iam::654654366125:oidc-provider/token.actions.githubusercontent.com"
+        role_arn: "arn:aws:iam::654654366125:role/terrateam"
