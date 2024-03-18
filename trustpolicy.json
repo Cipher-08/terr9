@@ -9,8 +9,7 @@
         "Action": "sts:AssumeRoleWithWebIdentity",
         "Condition": {
           "StringLike": {
-            "token.actions.githubusercontent.com:sub":
-              "repo:74664860/*"
+            "token.actions.githubusercontent.com:sub": "repo:74664860/*"
           },
           "StringEquals": {
             "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
