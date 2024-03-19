@@ -19,4 +19,5 @@ variable "aws_secret_key" {
 variable "s3_bucket_name" {
   description = "Name of the S3 bucket"
   type        = string
+  default = "terrateam-bucket09"
 }
