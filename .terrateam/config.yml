@@ -1,6 +1,17 @@
-hooks:
-  all:
-    pre:
+# hooks:
+#   all:
+#     pre:
+#       - type: oidc
+#         provider: aws
+#         role_arn: ""
+
+
+
+workflows:
+  - tag_query: "dir:aws"
+    plan:
       - type: oidc
         provider: aws
-        role_arn: "arn:aws:iam::654654366125:user/terrateam"
+        role_arn: "arn:aws:iam::654654366125:role/terrateam"
+      - type: run
+        cmd: ['aws', 's3', 'ls']
