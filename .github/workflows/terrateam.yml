@@ -37,3 +37,15 @@ jobs:
           api-base-url: '${{ github.event.inputs.api-base-url }}'
         env:
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Terraform AWS Credentials
+        run: |
+          echo "TF_VAR_AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> $GITHUB_ENV
+          echo "TF_VAR_AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
+          
+    
